@@ -1,3 +1,3 @@
 #!/bin/zsh
-./build.sh && ./GANN even.csv
+./build.sh && ./GANN data.csv
 
