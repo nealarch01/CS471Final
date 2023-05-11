@@ -203,7 +203,8 @@ struct NeuralNetwork: Codable {
         let expectedOutputOriginal = expectedOutputs[0][0] // This is assuming that the output layer has only one node
         self.train(trainingInputs: trainingInputsCpy, expectedOutputs: expectedOutputsCpy, learningRate: learningRate, epochs: 250, targetError: targetError)
         let firstOutput = outputsAverage() // This assumes that the output layer has only one node
-        print("Completed initial non-generative training")
+        // red ansi color code: \u{001B}[0;31m
+        print("\u{001B}[0;31mStarting generative training\u{001B}[0;0m")
         print("=========================================")
 
         shiftInputs(topInput: firstOutput)
@@ -213,7 +214,7 @@ struct NeuralNetwork: Codable {
             propagateForward()
             let output = outputsAverage() // Returns the last collector (assumes only one node in the output layer)
             let expected = cosFn(offset + expectedOutputOriginal)
-            let error = pow(expected - output, 2)
+            let error = sqrt(pow(expected - output, 2))
             if error <= targetError {
                 print("Target error reached. ", terminator: "")
                 print("Given x: \(givenX), Generated y: \(output), Predicted: \(offset + expectedOutputOriginal) or \(expected), Error: \(error)")
@@ -224,7 +225,7 @@ struct NeuralNetwork: Codable {
             var newExpectedOutputs = [expected]
             propagateBackward(expectedOutputs: &newExpectedOutputs)
             updateWeights(learningRate: learningRate)
-            print("epoch: \(epoch), learning rate: \(learningRate), error: \(error)")
+            print("Epoch: \(epoch), Learning rate: \(learningRate), Error: \(error)")
         }
     }
 
@@ -232,13 +233,17 @@ struct NeuralNetwork: Codable {
         return (cos(x) + 1) * 0.5
     }
 
-    public func predict(row: [Double], expectedOutput: Double) -> String {
+    public func predict(row: [Double], expectedOutput: Double) -> (x: Double, y: Double) {
         var rowCosined = row.map { cosFn($0) }
         setInputLayer(trainingInputs: &rowCosined)
         propagateForward()
         let output = outputsAverage()
-        let error = pow(cosFn(expectedOutput) - output, 2)
-        return  "given x: \(row[0]), generated y: \(output), predicted y: \(cosFn(expectedOutput)), error: \(error)"
+        let error = sqrt(pow(cosFn(expectedOutput) - output, 2))
+        print("given x: \(row[0]), generated y: \(output), predicted y: \(cosFn(expectedOutput)), error: \(error)")
+        return (
+            x: rowCosined[0],
+            y: output
+        )
     }
 
     public func test(inputs: [[Double]]) -> Double {

@@ -38,7 +38,7 @@ let expectedOutputs = data.map { [$0[data[0].count - 1]] }
 
 print("Initialized training inputs and expected outputs")
 
-let networkTopology = NetworkTopology(layers: [4, 2, 1], collectors: [])
+let networkTopology = NetworkTopology(layers: [6, 3, 1], collectors: [])
 print("Initialized network topology")
 let neuralNetwork = NeuralNetwork(topology: networkTopology)
 print("Initialized neural network")
@@ -46,10 +46,26 @@ print("Initialized neural network")
 neuralNetwork.trainGeneratively(
     trainingInputs: trainingInputs,
     expectedOutputs: expectedOutputs,
-    learningRate: 0.4,
+    learningRate: 0.65,
     epochs: 500,
     targetError: 0.05
 )
+
+
+var predictInput: [Double] = [1, 2, 3, 4, 5, 6]
+var expectedOutput = 7.0
+
+var plotOutput: String = ""
+
+for _ in 0..<5 {
+    print("Predicting: \(predictInput) with expected output: \(expectedOutput)")
+    let output = neuralNetwork.predict(row: predictInput, expectedOutput: expectedOutput)
+    plotOutput += "(\(output.x),\(output.y))\n"
+    predictInput = predictInput.map { $0 + 1 }
+    expectedOutput += 1
+}
+
+print(plotOutput.dropLast())
 
 
 
