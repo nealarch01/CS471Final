@@ -199,7 +199,7 @@ struct NeuralNetwork: Codable {
         // 3. Train generative
         // Make training inputs go through cosFn 
         let trainingInputsCpy = trainingInputs.map { $0.map { cosFn($0) } } // x
-        var expectedOutputsCpy = expectedOutputs.map { $0.map { cosFn($0) } } // y
+        let expectedOutputsCpy = expectedOutputs.map { $0.map { cosFn($0) } } // y
         let expectedOutputOriginal = expectedOutputs[0][0] // This is assuming that the output layer has only one node
         self.train(trainingInputs: trainingInputsCpy, expectedOutputs: expectedOutputsCpy, learningRate: learningRate, epochs: 250, targetError: targetError)
         let firstOutput = outputsAverage() // This assumes that the output layer has only one node
@@ -207,23 +207,24 @@ struct NeuralNetwork: Codable {
         print("=========================================")
 
         shiftInputs(topInput: firstOutput)
-
+        var offset = 0.0
         for epoch in 0..<epochs {
             let givenX = layers[0][0].collector
             propagateForward()
             let output = outputsAverage() // Returns the last collector (assumes only one node in the output layer)
-            let expected = cosFn(Double(epoch) + expectedOutputOriginal)
+            let expected = cosFn(offset + expectedOutputOriginal)
             let error = pow(expected - output, 2)
             if error <= targetError {
-                print("Target error reached")
-                print("given x: \(givenX), generated y: \(output) predicted: \(expected), error: \(error)")
+                print("Target error reached. ", terminator: "")
+                print("Given x: \(givenX), Generated y: \(output), Predicted: \(offset + expectedOutputOriginal) or \(expected), Error: \(error)")
+                shiftInputs(topInput: output)
+                offset += 1
                 continue
             }
             var newExpectedOutputs = [expected]
             propagateBackward(expectedOutputs: &newExpectedOutputs)
             updateWeights(learningRate: learningRate)
-            shiftInputs(topInput: output)
-            print("epochs: \(epoch), learning rate: \(learningRate), error: \(error)")
+            print("epoch: \(epoch), learning rate: \(learningRate), error: \(error)")
         }
     }
 
@@ -231,8 +232,13 @@ struct NeuralNetwork: Codable {
         return (cos(x) + 1) * 0.5
     }
 
-    public func predict(row: [Double], expectedOutput: Double) {
-
+    public func predict(row: [Double], expectedOutput: Double) -> String {
+        var rowCosined = row.map { cosFn($0) }
+        setInputLayer(trainingInputs: &rowCosined)
+        propagateForward()
+        let output = outputsAverage()
+        let error = pow(cosFn(expectedOutput) - output, 2)
+        return  "given x: \(row[0]), generated y: \(output), predicted y: \(cosFn(expectedOutput)), error: \(error)"
     }
 
     public func test(inputs: [[Double]]) -> Double {
