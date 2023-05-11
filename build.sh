@@ -1,2 +1,3 @@
 #!/bin/zsh
-swift build --build-path Builds
+# swift build -c release --build-path ./Build/
+swiftc -o GANN Sources/**/*.swift

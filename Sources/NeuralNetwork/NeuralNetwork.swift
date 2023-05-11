@@ -10,7 +10,7 @@ struct NeuralNetwork: Codable {
 
     init(topology: NetworkTopology) {
         // Create the first layer 
-        let firstLayer = createLayer(size: topology.layers[0], collectors: topology.collectors)
+        let firstLayer = createLayer(size: topology.layers[0], collectors: Array(repeating: 0.0, count: topology.layers[0]))
         layers.append(firstLayer)
 
         for i in 1..<topology.layers.count {
@@ -143,7 +143,7 @@ struct NeuralNetwork: Codable {
         }
     }
 
-    private func updateWeights(learningRate: Double, trainingInputs: inout [Double]) {
+    private func updateWeights(learningRate: Double) {
         // General formula: weight = weight - learningRate * delta * collectorFromPreviousLayer
         for layerIndex in 1..<layers.count {
             let inputs: [Double] = layers[layerIndex - 1].map { $0.collector }
@@ -174,7 +174,7 @@ struct NeuralNetwork: Codable {
                     sumError += pow(error, 2)
                 }
                 propagateBackward(expectedOutputs: &expectedOutputsCpy[j])
-                updateWeights(learningRate: learningRate, trainingInputs: &trainingInputsCpy[j])
+                updateWeights(learningRate: learningRate)
             }
             if sumError <= targetError {
                 print("Target error reached")
@@ -183,6 +183,42 @@ struct NeuralNetwork: Codable {
             }
             print("epoch: \(epoch), learning rate: \(learningRate), error: \(sumError)")
         }
+    }
+
+    private func shiftInputs(topInput: Double) {
+        for i in (0..<layers[0].count - 1).reversed() {
+            layers[0][i + 1].updateCollector(newCollector: layers[0][i].collector)
+        }
+        layers[0][0].updateCollector(newCollector: topInput)
+    }
+
+    public func trainGeneratively(trainingInputs: [[Double]], expectedOutputs: [[Double]], learningRate: Double, epochs: Int, targetError: Double) {
+        // This function requires an output layer with only one node
+        // 1. Train non-generative
+        // 2. Generate new data
+        // 3. Train generative
+        // Make training inputs go through cosFn 
+        let trainingInputsCpy = trainingInputs.map { $0.map { cosFn($0) } } // x
+        var expectedOutputsCpy = expectedOutputs.map { $0.map { cosFn($0) } } // y
+        print("Training generatively...")
+        self.train(trainingInputs: trainingInputsCpy, expectedOutputs: expectedOutputsCpy, learningRate: learningRate, epochs: 250, targetError: targetError)
+        print("Completed non-generative training")
+        // print("Top input: \(self.layers[0][0].collector)")
+        self.shiftInputs(topInput: self.outputsAverage())
+        // print("Top input: \(self.layers[0][0].collector)")
+        for _ in 0..<epochs {
+            propagateForward()
+            let outputY = outputsAverage() // This should be the collector, we are assuming that the output layer has only one node
+            let error = pow(expectedOutputsCpy[0][0] - outputY, 2)
+            print("given x: \(outputY), expected y: \(expectedOutputsCpy[0][0]), error: \(error)")
+            propagateBackward(expectedOutputs: &expectedOutputsCpy[0])
+            updateWeights(learningRate: learningRate)
+            shiftInputs(topInput: outputsAverage())
+        }
+    }
+
+    public func cosFn(_ x: Double) -> Double {
+        return (cos(x) + 1) * 0.5
     }
 
     public func test(inputs: [[Double]]) -> Double {

@@ -12,7 +12,10 @@ let package = Package(
         .executableTarget (
             name: "Sources",
             dependencies: [],
-            path: "./Sources"
+            path: "./Sources",
+            resources: [
+                .copy("./Data/even.csv")
+            ]
         )
     ]
 )
