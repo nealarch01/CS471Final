@@ -200,25 +200,39 @@ struct NeuralNetwork: Codable {
         // Make training inputs go through cosFn 
         let trainingInputsCpy = trainingInputs.map { $0.map { cosFn($0) } } // x
         var expectedOutputsCpy = expectedOutputs.map { $0.map { cosFn($0) } } // y
-        print("Training generatively...")
+        let expectedOutputOriginal = expectedOutputs[0][0] // This is assuming that the output layer has only one node
         self.train(trainingInputs: trainingInputsCpy, expectedOutputs: expectedOutputsCpy, learningRate: learningRate, epochs: 250, targetError: targetError)
-        print("Completed non-generative training")
-        // print("Top input: \(self.layers[0][0].collector)")
-        self.shiftInputs(topInput: self.outputsAverage())
-        // print("Top input: \(self.layers[0][0].collector)")
-        for _ in 0..<epochs {
+        let firstOutput = outputsAverage() // This assumes that the output layer has only one node
+        print("Completed initial non-generative training")
+        print("=========================================")
+
+        shiftInputs(topInput: firstOutput)
+
+        for epoch in 0..<epochs {
+            let givenX = layers[0][0].collector
             propagateForward()
-            let outputY = outputsAverage() // This should be the collector, we are assuming that the output layer has only one node
-            let error = pow(expectedOutputsCpy[0][0] - outputY, 2)
-            print("given x: \(outputY), expected y: \(expectedOutputsCpy[0][0]), error: \(error)")
-            propagateBackward(expectedOutputs: &expectedOutputsCpy[0])
+            let output = outputsAverage() // Returns the last collector (assumes only one node in the output layer)
+            let expected = cosFn(Double(epoch) + expectedOutputOriginal)
+            let error = pow(expected - output, 2)
+            if error <= targetError {
+                print("Target error reached")
+                print("given x: \(givenX), generated y: \(output) predicted: \(expected), error: \(error)")
+                continue
+            }
+            var newExpectedOutputs = [expected]
+            propagateBackward(expectedOutputs: &newExpectedOutputs)
             updateWeights(learningRate: learningRate)
-            shiftInputs(topInput: outputsAverage())
+            shiftInputs(topInput: output)
+            print("epochs: \(epoch), learning rate: \(learningRate), error: \(error)")
         }
     }
 
     public func cosFn(_ x: Double) -> Double {
         return (cos(x) + 1) * 0.5
+    }
+
+    public func predict(row: [Double], expectedOutput: Double) {
+
     }
 
     public func test(inputs: [[Double]]) -> Double {
