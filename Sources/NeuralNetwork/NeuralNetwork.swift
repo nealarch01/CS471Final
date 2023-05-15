@@ -192,7 +192,7 @@ struct NeuralNetwork: Codable {
         layers[0][0].updateCollector(newCollector: topInput)
     }
 
-    public func trainGeneratively(trainingInputs: [[Double]], expectedOutputs: [[Double]], learningRate: Double, epochs: Int, targetError: Double) {
+    public func trainGeneratively(trainingInputs: [[Double]], expectedOutputs: [[Double]], learningRate: Double, epochs: Int, targetError: Double, offsetBy: Double) {
         // This function requires an output layer with only one node
         // 1. Train non-generative
         // 2. Generate new data
@@ -219,7 +219,7 @@ struct NeuralNetwork: Codable {
                 print("Target error reached. ", terminator: "")
                 print("Given x: \(givenX), Generated y: \(output), Predicted: \(offset + expectedOutputOriginal) or \(expected), Error: \(error)")
                 shiftInputs(topInput: output)
-                offset += 1
+                offset += offsetBy
                 continue
             }
             var newExpectedOutputs = [expected]
