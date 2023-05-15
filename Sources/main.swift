@@ -58,7 +58,7 @@ neuralNetwork.trainGeneratively(
 )
 
 var predictInput: [Double] = trainingInputs[0]
-var expectedOutput = 7.0
+var expectedOutput = expectedOutputs[0][0]
 
 var plotOutput: String = ""
 
