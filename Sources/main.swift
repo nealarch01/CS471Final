@@ -20,8 +20,8 @@ func readCSV(filepath: String) -> [[Double]]? {
 }
 
 let args = CommandLine.arguments
-if args.count < 2 {
-    print("Usage: swift main.swift <input file>")
+if args.count < 3 {
+    print("Usage: swift main.swift <input file> <prediction offset>")
     exit(1)
 }
 
@@ -43,7 +43,10 @@ print("Initialized network topology")
 let neuralNetwork = NeuralNetwork(topology: networkTopology)
 print("Initialized neural network")
 
-let nextOffset = 1.0
+guard let nextOffset = Double(args[2]) else {
+    print("Invalid offset")
+    exit(1)
+}
 
 neuralNetwork.trainGeneratively(
     trainingInputs: trainingInputs,
