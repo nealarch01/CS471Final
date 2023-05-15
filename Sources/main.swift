@@ -43,26 +43,29 @@ print("Initialized network topology")
 let neuralNetwork = NeuralNetwork(topology: networkTopology)
 print("Initialized neural network")
 
+let nextOffset = 1.0
+
 neuralNetwork.trainGeneratively(
     trainingInputs: trainingInputs,
     expectedOutputs: expectedOutputs,
     learningRate: 0.65,
-    epochs: 500,
-    targetError: 0.05
+    epochs: 250,
+    targetError: 0.05,
+    offsetBy: nextOffset // This changes the expected output once the network has learned inputs
 )
 
-
-var predictInput: [Double] = [1, 2, 3, 4, 5, 6]
+var predictInput: [Double] = trainingInputs[0]
 var expectedOutput = 7.0
 
 var plotOutput: String = ""
 
-for _ in 0..<5 {
-    print("Predicting: \(predictInput) with expected output: \(expectedOutput)")
+for _ in 0..<6 {
+    print("Input: \(predictInput) with expected output: \(expectedOutput)")
     let output = neuralNetwork.predict(row: predictInput, expectedOutput: expectedOutput)
+    print("\n")
     plotOutput += "(\(output.x),\(output.y))\n"
-    predictInput = predictInput.map { $0 + 1 }
-    expectedOutput += 1
+    predictInput = predictInput.map { $0 + nextOffset } // Increments all elements by 1
+    expectedOutput += nextOffset
 }
 
 print(plotOutput.dropLast())
