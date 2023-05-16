@@ -178,55 +178,75 @@ struct NeuralNetwork: Codable {
             }
             if sumError <= targetError {
                 print("Target error reached")
-                print("epoch: \(epoch), learning rate: \(learningRate), error: \(sumError)")
+                print("> Epoch: \(epoch), Learning Rate: \(learningRate), Error: \(sumError)")
                 return
             }
-            print("epoch: \(epoch), learning rate: \(learningRate), error: \(sumError)")
+            print("> Epoch: \(epoch), Learning Rate: \(learningRate), Error: \(sumError)")
         }
     }
 
-    private func shiftInputs(topInput: Double) {
-        for i in (0..<layers[0].count - 1).reversed() {
-            layers[0][i + 1].updateCollector(newCollector: layers[0][i].collector)
+    private func shiftInputs(newInput: Double) {
+        /*
+        [f(1) => f(2)]
+        [f(2) => f(3)]
+        [f(3) => f(4)]
+        [f(4) => f(5)]
+        */
+        for i in 0..<layers[0].count - 1 {
+            layers[0][i].updateCollector(newCollector: layers[0][i + 1].collector)
         }
-        layers[0][0].updateCollector(newCollector: topInput)
+        layers[0][layers[0].count - 1].updateCollector(newCollector: newInput)
     }
 
-    public func trainGeneratively(trainingInputs: [[Double]], expectedOutputs: [[Double]], learningRate: Double, epochs: Int, targetError: Double, offsetBy: Double) {
+    public func trainGeneratively(trainingInputs: [[Double]], expectedOutputs: [[Double]], learningRate: Double, epochs: Int, targetError: Double, newRows: Int, offsetBy: Double) {
         // This function requires an output layer with only one node
         // 1. Train non-generative
         // 2. Generate new data
         // 3. Train generative
-        // Make training inputs go through cosFn 
+        // 4. 😰
         let trainingInputsCpy = trainingInputs.map { $0.map { cosFn($0) } } // x
         let expectedOutputsCpy = expectedOutputs.map { $0.map { cosFn($0) } } // y
-        let expectedOutputOriginal = expectedOutputs[0][0] // This is assuming that the output layer has only one node
+        var expectedOutput = expectedOutputs[0][0] // This is assuming that the output layer has only one node
+
         self.train(trainingInputs: trainingInputsCpy, expectedOutputs: expectedOutputsCpy, learningRate: learningRate, epochs: 250, targetError: targetError)
-        let firstOutput = outputsAverage() // This assumes that the output layer has only one node
+
+        let initialOutput = outputsAverage() // This assumes that the output layer has only one node
         // red ansi color code: \u{001B}[0;31m
         print("\u{001B}[0;31mStarting generative training\u{001B}[0;0m")
         print("=========================================")
 
-        shiftInputs(topInput: firstOutput)
-        var offset = 0.0
-        for epoch in 0..<epochs {
-            let givenX = layers[0][0].collector
-            propagateForward()
-            let output = outputsAverage() // Returns the last collector (assumes only one node in the output layer)
-            let expected = cosFn(offset + expectedOutputOriginal)
-            let error = sqrt(pow(expected - output, 2))
-            if error <= targetError {
-                print("Target error reached. ", terminator: "")
-                print("Given x: \(givenX), Generated y: \(output), Predicted: \(offset + expectedOutputOriginal) or \(expected), Error: \(error)")
-                shiftInputs(topInput: output)
-                offset += offsetBy
-                continue
+        var generatedInputs: [[Double]] = []
+        generatedInputs.append(layers[0].map { $0.collector } + [cosFn(expectedOutput)])
+
+        shiftInputs(newInput: initialOutput) // Puts the first output in the input layer and shifts the rest of the inputs down
+        expectedOutput += offsetBy // Change the expected output
+
+        for _ in 0..<newRows {
+            for epoch in 0..<epochs {
+                // let givenX = layers[0][layers[0].count - 1].collector
+                propagateForward()
+                let expected = cosFn(expectedOutput)
+                let error = sqrt(pow(expected - outputsAverage(), 2))
+                if error <= targetError {
+                    print(">> Epoch: \(epoch), Learning Rate: \(learningRate), Error: \(error)")
+                    break
+                }
+                var newExpectedOutputs = [expected]
+                propagateBackward(expectedOutputs: &newExpectedOutputs)
+                updateWeights(learningRate: learningRate)
+                print(">> Epoch: \(epoch), Learning Rate: \(learningRate), Error: \(error)")
             }
-            var newExpectedOutputs = [expected]
-            propagateBackward(expectedOutputs: &newExpectedOutputs)
-            updateWeights(learningRate: learningRate)
-            print("Epoch: \(epoch), Learning rate: \(learningRate), Error: \(error)")
+            generatedInputs.append(layers[0].map { $0.collector } + [cosFn(expectedOutput)])
+            shiftInputs(newInput: outputsAverage())
+            print("> Created new row: \(generatedInputs.last!)")
+            expectedOutput += offsetBy
         }
+
+        print("\n")
+        for gi in generatedInputs {
+            print(gi)
+        }
+        print("\n")
     }
 
     public func cosFn(_ x: Double) -> Double {

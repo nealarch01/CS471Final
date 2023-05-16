@@ -51,9 +51,10 @@ guard let nextOffset = Double(args[2]) else {
 neuralNetwork.trainGeneratively(
     trainingInputs: trainingInputs,
     expectedOutputs: expectedOutputs,
-    learningRate: 0.65,
+    learningRate: 0.60,
     epochs: 250,
-    targetError: 0.05,
+    targetError: 0.009,
+    newRows: 5,
     offsetBy: nextOffset // This changes the expected output once the network has learned inputs
 )
 
