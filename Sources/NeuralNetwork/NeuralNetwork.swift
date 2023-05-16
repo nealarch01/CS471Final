@@ -198,7 +198,7 @@ struct NeuralNetwork: Codable {
         layers[0][layers[0].count - 1].updateCollector(newCollector: newInput)
     }
 
-    public func trainGeneratively(trainingInputs: [[Double]], expectedOutputs: [[Double]], learningRate: Double, epochs: Int, targetError: Double, newRows: Int, offsetBy: Double) {
+    public func trainGeneratively(trainingInputs: [[Double]], expectedOutputs: [[Double]], learningRate: Double, epochs: Int, targetError: Double, newRows: Int, offsetBy: Double) -> [[Double]] {
         // This function requires an output layer with only one node
         // 1. Train non-generative
         // 2. Generate new data
@@ -242,11 +242,7 @@ struct NeuralNetwork: Codable {
             expectedOutput += offsetBy
         }
 
-        print("\n")
-        for gi in generatedInputs {
-            print(gi)
-        }
-        print("\n")
+        return generatedInputs
     }
 
     public func cosFn(_ x: Double) -> Double {
