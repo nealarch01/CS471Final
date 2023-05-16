@@ -48,15 +48,21 @@ guard let nextOffset = Double(args[2]) else {
     exit(1)
 }
 
-neuralNetwork.trainGeneratively(
+let generated = neuralNetwork.trainGeneratively(
     trainingInputs: trainingInputs,
     expectedOutputs: expectedOutputs,
     learningRate: 0.60,
     epochs: 250,
     targetError: 0.009,
-    newRows: 5,
+    newRows: 10,
     offsetBy: nextOffset // This changes the expected output once the network has learned inputs
 )
+
+print("\nGenerated: ")
+for row in generated {
+    print(row)
+}
+print("")
 
 var predictInput: [Double] = trainingInputs[0]
 var expectedOutput = expectedOutputs[0][0]
@@ -73,6 +79,4 @@ for _ in 0..<6 {
 }
 
 print(plotOutput.dropLast())
-
-
 
