@@ -255,7 +255,7 @@ struct NeuralNetwork: Codable {
         propagateForward()
         let output = outputsAverage()
         let error = sqrt(pow(cosFn(expectedOutput) - output, 2))
-        print("given x: \(row[0]), generated y: \(output), predicted y: \(cosFn(expectedOutput)), error: \(error)")
+        print("given x: \(row[row.count - 1]), generated y: \(output), predicted y: \(cosFn(expectedOutput)), error: \(error)")
         return (
             x: rowCosined[0],
             y: output

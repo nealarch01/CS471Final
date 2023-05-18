@@ -1,457 +1,458 @@
-~/Desktop/Projects/Swift/GenerativeArtificialNeuralNetwork main ?1 ❯ ./GANN even.csv 2
 Opened file
 Initialized training inputs and expected outputs
 Initialized network topology
 Initialized neural network
-> Epoch: 0, Learning Rate: 0.6, Error: 0.033412845346423393
-> Epoch: 1, Learning Rate: 0.6, Error: 0.03033006366456991
-> Epoch: 2, Learning Rate: 0.6, Error: 0.027410746510476307
-> Epoch: 3, Learning Rate: 0.6, Error: 0.024665630222107632
-> Epoch: 4, Learning Rate: 0.6, Error: 0.022102226212420892
-> Epoch: 5, Learning Rate: 0.6, Error: 0.019724778583230254
-> Epoch: 6, Learning Rate: 0.6, Error: 0.01753436680541351
-> Epoch: 7, Learning Rate: 0.6, Error: 0.015529135453199373
-> Epoch: 8, Learning Rate: 0.6, Error: 0.013704624424616148
-> Epoch: 9, Learning Rate: 0.6, Error: 0.01205416831015844
-> Epoch: 10, Learning Rate: 0.6, Error: 0.010569332648106843
-> Epoch: 11, Learning Rate: 0.6, Error: 0.00924035719264763
+> Epoch: 0, Learning Rate: 0.6, Error: 0.029050547798094805
+> Epoch: 1, Learning Rate: 0.6, Error: 0.02706027244742926
+> Epoch: 2, Learning Rate: 0.6, Error: 0.025162669012059827
+> Epoch: 3, Learning Rate: 0.6, Error: 0.023358784710718228
+> Epoch: 4, Learning Rate: 0.6, Error: 0.021648932724095713
+> Epoch: 5, Learning Rate: 0.6, Error: 0.020032737693172455
+> Epoch: 6, Learning Rate: 0.6, Error: 0.01850919088772453
+> Epoch: 7, Learning Rate: 0.6, Error: 0.017076712609396725
+> Epoch: 8, Learning Rate: 0.6, Error: 0.015733219409183447
+> Epoch: 9, Learning Rate: 0.6, Error: 0.014476193823620271
+> Epoch: 10, Learning Rate: 0.6, Error: 0.013302754544115804
+> Epoch: 11, Learning Rate: 0.6, Error: 0.012209725204391205
+> Epoch: 12, Learning Rate: 0.6, Error: 0.01119370027718711
+> Epoch: 13, Learning Rate: 0.6, Error: 0.010251106890802454
+> Epoch: 14, Learning Rate: 0.6, Error: 0.00937826168977538
 Target error reached
-> Epoch: 12, Learning Rate: 0.6, Error: 0.008056581100400511
-Starting generative training
+> Epoch: 15, Learning Rate: 0.6, Error: 0.008571422157427072
+[0;31mStarting generative training[0;0m
 =========================================
-> Created new row: [0.17317818956819403, 0.9800851433251829, 0.42724998309569323, 0.08046423546177378, 0.9219269793662461, 0.6581270688745731, 0.02117025983830767]
-> Created new row: [0.9800851433251829, 0.42724998309569323, 0.08046423546177378, 0.9219269793662461, 0.6581270688745731, 0.048893976187524606, 0.8301583541220401]
-> Created new row: [0.42724998309569323, 0.08046423546177378, 0.9219269793662461, 0.6581270688745731, 0.048893976187524606, 0.8212869289681256, 0.704041030906696]
-> Created new row: [0.08046423546177378, 0.9219269793662461, 0.6581270688745731, 0.048893976187524606, 0.8212869289681256, 0.7127960267576776, 1.95868026814372e-05]
-> Created new row: [0.9219269793662461, 0.6581270688745731, 0.048893976187524606, 0.8212869289681256, 0.7127960267576776, 0.04013726311920132, 0.7120895036684984]
-> Created new row: [0.6581270688745731, 0.048893976187524606, 0.8212869289681256, 0.7127960267576776, 0.04013726311920132, 0.7033069479489256, 0.8234596611643201]
-> Created new row: [0.048893976187524606, 0.8212869289681256, 0.7127960267576776, 0.04013726311920132, 0.7033069479489256, 0.8144907383524032, 0.018697066843216703]
-> Created new row: [0.8212869289681256, 0.7127960267576776, 0.04013726311920132, 0.7033069479489256, 0.8144907383524032, 0.04801168482534248, 0.577125724943792]
-> Created new row: [0.7127960267576776, 0.04013726311920132, 0.7033069479489256, 0.8144907383524032, 0.04801168482534248, 0.5681457462860049, 0.9171116802532551]
-> Created new row: [0.04013726311920132, 0.7033069479489256, 0.8144907383524032, 0.04801168482534248, 0.5681457462860049, 0.9081696864906555, 0.07571486260769739]
+> Created new row: [0.17317818956819403, 0.9800851433251829, 0.42724998309569323, 0.08046423546177378, 0.9219269793662461, 0.6609505844415984, 0.02117025983830767]
+> Created new row: [0.9800851433251829, 0.42724998309569323, 0.08046423546177378, 0.9219269793662461, 0.6609505844415984, 0.05192656710835188, 0.8301583541220401]
+> Created new row: [0.42724998309569323, 0.08046423546177378, 0.9219269793662461, 0.6609505844415984, 0.05192656710835188, 0.8211788845435862, 0.704041030906696]
+> Created new row: [0.08046423546177378, 0.9219269793662461, 0.6609505844415984, 0.05192656710835188, 0.8211788845435862, 0.7129702347399242, 1.95868026814372e-05]
+> Created new row: [0.9219269793662461, 0.6609505844415984, 0.05192656710835188, 0.8211788845435862, 0.7129702347399242, 0.04423561446986668, 0.7120895036684984]
+> Created new row: [0.6609505844415984, 0.05192656710835188, 0.8211788845435862, 0.7129702347399242, 0.04423561446986668, 0.70315516684159, 0.8234596611643201]
+> Created new row: [0.05192656710835188, 0.8211788845435862, 0.7129702347399242, 0.04423561446986668, 0.70315516684159, 0.8145884316348424, 0.018697066843216703]
+> Created new row: [0.8211788845435862, 0.7129702347399242, 0.04423561446986668, 0.70315516684159, 0.8145884316348424, 0.05422265561718953, 0.577125724943792]
+> Created new row: [0.7129702347399242, 0.04423561446986668, 0.70315516684159, 0.8145884316348424, 0.05422265561718953, 0.5682161662027956, 0.9171116802532551]
+> Created new row: [0.04423561446986668, 0.70315516684159, 0.8145884316348424, 0.05422265561718953, 0.5682161662027956, 0.899174163711189, 0.07571486260769739]
 Generated 11 new rows of data
 
-Generated:
+Generated: 
 [0.2919265817264288, 0.17317818956819403, 0.9800851433251829, 0.42724998309569323, 0.08046423546177378, 0.9219269793662461, 0.5683686091039168]
-[0.17317818956819403, 0.9800851433251829, 0.42724998309569323, 0.08046423546177378, 0.9219269793662461, 0.6581270688745731, 0.02117025983830767]
-[0.9800851433251829, 0.42724998309569323, 0.08046423546177378, 0.9219269793662461, 0.6581270688745731, 0.048893976187524606, 0.8301583541220401]
-[0.42724998309569323, 0.08046423546177378, 0.9219269793662461, 0.6581270688745731, 0.048893976187524606, 0.8212869289681256, 0.704041030906696]
-[0.08046423546177378, 0.9219269793662461, 0.6581270688745731, 0.048893976187524606, 0.8212869289681256, 0.7127960267576776, 1.95868026814372e-05]
-[0.9219269793662461, 0.6581270688745731, 0.048893976187524606, 0.8212869289681256, 0.7127960267576776, 0.04013726311920132, 0.7120895036684984]
-[0.6581270688745731, 0.048893976187524606, 0.8212869289681256, 0.7127960267576776, 0.04013726311920132, 0.7033069479489256, 0.8234596611643201]
-[0.048893976187524606, 0.8212869289681256, 0.7127960267576776, 0.04013726311920132, 0.7033069479489256, 0.8144907383524032, 0.018697066843216703]
-[0.8212869289681256, 0.7127960267576776, 0.04013726311920132, 0.7033069479489256, 0.8144907383524032, 0.04801168482534248, 0.577125724943792]
-[0.7127960267576776, 0.04013726311920132, 0.7033069479489256, 0.8144907383524032, 0.04801168482534248, 0.5681457462860049, 0.9171116802532551]
-[0.04013726311920132, 0.7033069479489256, 0.8144907383524032, 0.04801168482534248, 0.5681457462860049, 0.9081696864906555, 0.07571486260769739]
-> Epoch: 0, Learning Rate: 0.6, Error: 1.3486278479783613
-> Epoch: 1, Learning Rate: 0.6, Error: 0.7984073410245981
-> Epoch: 2, Learning Rate: 0.6, Error: 0.5825709374672383
-> Epoch: 3, Learning Rate: 0.6, Error: 0.505059147298218
-> Epoch: 4, Learning Rate: 0.6, Error: 0.46292037230894734
-> Epoch: 5, Learning Rate: 0.6, Error: 0.4299773500746795
-> Epoch: 6, Learning Rate: 0.6, Error: 0.4007695001748948
-> Epoch: 7, Learning Rate: 0.6, Error: 0.37408547847844065
-> Epoch: 8, Learning Rate: 0.6, Error: 0.3495542003700659
-> Epoch: 9, Learning Rate: 0.6, Error: 0.32698109721814494
-> Epoch: 10, Learning Rate: 0.6, Error: 0.30621387247231246
-> Epoch: 11, Learning Rate: 0.6, Error: 0.28711353645752513
-> Epoch: 12, Learning Rate: 0.6, Error: 0.2695482685647768
-> Epoch: 13, Learning Rate: 0.6, Error: 0.25339267656231246
-> Epoch: 14, Learning Rate: 0.6, Error: 0.2385282667157984
-> Epoch: 15, Learning Rate: 0.6, Error: 0.22484400031497218
-> Epoch: 16, Learning Rate: 0.6, Error: 0.21223664094691028
-> Epoch: 17, Learning Rate: 0.6, Error: 0.20061085061180373
-> Epoch: 18, Learning Rate: 0.6, Error: 0.18987907118527597
-> Epoch: 19, Learning Rate: 0.6, Error: 0.17996124603750438
-> Epoch: 20, Learning Rate: 0.6, Error: 0.1707844338612557
-> Epoch: 21, Learning Rate: 0.6, Error: 0.16228235753921708
-> Epoch: 22, Learning Rate: 0.6, Error: 0.15439492079426256
-> Epoch: 23, Learning Rate: 0.6, Error: 0.1470677164248038
-> Epoch: 24, Learning Rate: 0.6, Error: 0.14025154267670115
-> Epoch: 25, Learning Rate: 0.6, Error: 0.13390193870957764
-> Epoch: 26, Learning Rate: 0.6, Error: 0.12797874594330166
-> Epoch: 27, Learning Rate: 0.6, Error: 0.12244569904180476
-> Epoch: 28, Learning Rate: 0.6, Error: 0.11727004814837062
-> Epoch: 29, Learning Rate: 0.6, Error: 0.11242221251205071
-> Epoch: 30, Learning Rate: 0.6, Error: 0.10787546466530495
-> Epoch: 31, Learning Rate: 0.6, Error: 0.10360564369363563
-> Epoch: 32, Learning Rate: 0.6, Error: 0.09959089577657686
-> Epoch: 33, Learning Rate: 0.6, Error: 0.09581143999937573
-> Epoch: 34, Learning Rate: 0.6, Error: 0.09224935737949888
-> Epoch: 35, Learning Rate: 0.6, Error: 0.0888884010804262
-> Epoch: 36, Learning Rate: 0.6, Error: 0.08571382586717846
-> Epoch: 37, Learning Rate: 0.6, Error: 0.0827122349723619
-> Epoch: 38, Learning Rate: 0.6, Error: 0.07987144267316325
-> Epoch: 39, Learning Rate: 0.6, Error: 0.07718035101830105
-> Epoch: 40, Learning Rate: 0.6, Error: 0.0746288392823834
-> Epoch: 41, Learning Rate: 0.6, Error: 0.07220766485884034
-> Epoch: 42, Learning Rate: 0.6, Error: 0.06990837442872291
-> Epoch: 43, Learning Rate: 0.6, Error: 0.0677232243595789
-> Epoch: 44, Learning Rate: 0.6, Error: 0.06564510939557404
-> Epoch: 45, Learning Rate: 0.6, Error: 0.06366749879689856
-> Epoch: 46, Learning Rate: 0.6, Error: 0.06178437917353287
-> Epoch: 47, Learning Rate: 0.6, Error: 0.05999020333619431
-> Epoch: 48, Learning Rate: 0.6, Error: 0.05827984455642843
-> Epoch: 49, Learning Rate: 0.6, Error: 0.056648555689138076
-> Epoch: 50, Learning Rate: 0.6, Error: 0.05509193266516096
-> Epoch: 51, Learning Rate: 0.6, Error: 0.05360588190963789
-> Epoch: 52, Learning Rate: 0.6, Error: 0.05218659128461139
-> Epoch: 53, Learning Rate: 0.6, Error: 0.05083050419229539
-> Epoch: 54, Learning Rate: 0.6, Error: 0.049534296509403095
-> Epoch: 55, Learning Rate: 0.6, Error: 0.04829485605340272
-> Epoch: 56, Learning Rate: 0.6, Error: 0.047109264309088864
-> Epoch: 57, Learning Rate: 0.6, Error: 0.04597478016885062
-> Epoch: 58, Learning Rate: 0.6, Error: 0.044888825462842036
-> Epoch: 59, Learning Rate: 0.6, Error: 0.04384897207621748
-> Epoch: 60, Learning Rate: 0.6, Error: 0.042852930469915396
-> Epoch: 61, Learning Rate: 0.6, Error: 0.0418985394393505
-> Epoch: 62, Learning Rate: 0.6, Error: 0.04098375696194354
-> Epoch: 63, Learning Rate: 0.6, Error: 0.04010665199979292
-> Epoch: 64, Learning Rate: 0.6, Error: 0.03926539713804432
-> Epoch: 65, Learning Rate: 0.6, Error: 0.038458261952713735
-> Epoch: 66, Learning Rate: 0.6, Error: 0.03768360701389842
-> Epoch: 67, Learning Rate: 0.6, Error: 0.03693987844151771
-> Epoch: 68, Learning Rate: 0.6, Error: 0.03622560294098078
-> Epoch: 69, Learning Rate: 0.6, Error: 0.03553938325552402
-> Epoch: 70, Learning Rate: 0.6, Error: 0.03487989398041569
-> Epoch: 71, Learning Rate: 0.6, Error: 0.03424587769183769
-> Epoch: 72, Learning Rate: 0.6, Error: 0.033636141350049324
-> Epoch: 73, Learning Rate: 0.6, Error: 0.03304955294247009
-> Epoch: 74, Learning Rate: 0.6, Error: 0.032485038337620786
-> Epoch: 75, Learning Rate: 0.6, Error: 0.03194157832549779
-> Epoch: 76, Learning Rate: 0.6, Error: 0.031418205823963145
-> Epoch: 77, Learning Rate: 0.6, Error: 0.03091400323417409
-> Epoch: 78, Learning Rate: 0.6, Error: 0.03042809993099808
-> Epoch: 79, Learning Rate: 0.6, Error: 0.029959669876822383
-> Epoch: 80, Learning Rate: 0.6, Error: 0.029507929349212633
-> Epoch: 81, Learning Rate: 0.6, Error: 0.029072134774562174
-> Epoch: 82, Learning Rate: 0.6, Error: 0.02865158066124497
-> Epoch: 83, Learning Rate: 0.6, Error: 0.028245597626881662
-> Epoch: 84, Learning Rate: 0.6, Error: 0.02785355051519701
-> Epoch: 85, Learning Rate: 0.6, Error: 0.027474836598618213
-> Epoch: 86, Learning Rate: 0.6, Error: 0.02710888386327462
-> Epoch: 87, Learning Rate: 0.6, Error: 0.026755149373438404
-> Epoch: 88, Learning Rate: 0.6, Error: 0.026413117712715314
-> Epoch: 89, Learning Rate: 0.6, Error: 0.026082299499484877
-> Epoch: 90, Learning Rate: 0.6, Error: 0.025762229974209763
-> Epoch: 91, Learning Rate: 0.6, Error: 0.02545246765630886
-> Epoch: 92, Learning Rate: 0.6, Error: 0.02515259306832656
-> Epoch: 93, Learning Rate: 0.6, Error: 0.024862207525144453
-> Epoch: 94, Learning Rate: 0.6, Error: 0.02458093198598261
-> Epoch: 95, Learning Rate: 0.6, Error: 0.024308405966925548
-> Epoch: 96, Learning Rate: 0.6, Error: 0.0240442865116999
-> Epoch: 97, Learning Rate: 0.6, Error: 0.023788247218418514
-> Epoch: 98, Learning Rate: 0.6, Error: 0.02353997732000063
-> Epoch: 99, Learning Rate: 0.6, Error: 0.023299180815982153
-> Epoch: 100, Learning Rate: 0.6, Error: 0.023065575653433576
-> Epoch: 101, Learning Rate: 0.6, Error: 0.022838892954728827
-> Epoch: 102, Learning Rate: 0.6, Error: 0.02261887628992705
-> Epoch: 103, Learning Rate: 0.6, Error: 0.02240528099157046
-> Epoch: 104, Learning Rate: 0.6, Error: 0.022197873509741457
-> Epoch: 105, Learning Rate: 0.6, Error: 0.021996430805273803
-> Epoch: 106, Learning Rate: 0.6, Error: 0.021800739779068545
-> Epoch: 107, Learning Rate: 0.6, Error: 0.021610596735528825
-> Epoch: 108, Learning Rate: 0.6, Error: 0.02142580687819439
-> Epoch: 109, Learning Rate: 0.6, Error: 0.021246183835727125
-> Epoch: 110, Learning Rate: 0.6, Error: 0.021071549216472144
-> Epoch: 111, Learning Rate: 0.6, Error: 0.020901732189896348
-> Epoch: 112, Learning Rate: 0.6, Error: 0.020736569093279946
-> Epoch: 113, Learning Rate: 0.6, Error: 0.02057590306211685
-> Epoch: 114, Learning Rate: 0.6, Error: 0.020419583682754223
-> Epoch: 115, Learning Rate: 0.6, Error: 0.02026746666587938
-> Epoch: 116, Learning Rate: 0.6, Error: 0.02011941353953658
-> Epoch: 117, Learning Rate: 0.6, Error: 0.01997529136042924
-> Epoch: 118, Learning Rate: 0.6, Error: 0.019834972442335456
-> Epoch: 119, Learning Rate: 0.6, Error: 0.019698334100533083
-> Epoch: 120, Learning Rate: 0.6, Error: 0.019565258411197405
-> Epoch: 121, Learning Rate: 0.6, Error: 0.01943563198479843
-> Epoch: 122, Learning Rate: 0.6, Error: 0.019309345752586082
-> Epoch: 123, Learning Rate: 0.6, Error: 0.019186294765310162
-> Epoch: 124, Learning Rate: 0.6, Error: 0.019066378003376797
-> Epoch: 125, Learning Rate: 0.6, Error: 0.01894949819769628
-> Epoch: 126, Learning Rate: 0.6, Error: 0.018835561660526492
-> Epoch: 127, Learning Rate: 0.6, Error: 0.018724478125663316
-> Epoch: 128, Learning Rate: 0.6, Error: 0.018616160597373286
-> Epoch: 129, Learning Rate: 0.6, Error: 0.018510525207505478
-> Epoch: 130, Learning Rate: 0.6, Error: 0.018407491080257726
-> Epoch: 131, Learning Rate: 0.6, Error: 0.01830698020411019
-> Epoch: 132, Learning Rate: 0.6, Error: 0.018208917310471202
-> Epoch: 133, Learning Rate: 0.6, Error: 0.018113229758613375
-> Epoch: 134, Learning Rate: 0.6, Error: 0.018019847426507994
-> Epoch: 135, Learning Rate: 0.6, Error: 0.017928702607190917
-> Epoch: 136, Learning Rate: 0.6, Error: 0.017839729910321418
-> Epoch: 137, Learning Rate: 0.6, Error: 0.01775286616861782
-> Epoch: 138, Learning Rate: 0.6, Error: 0.017668050348875586
-> Epoch: 139, Learning Rate: 0.6, Error: 0.017585223467294627
-> Epoch: 140, Learning Rate: 0.6, Error: 0.01750432850886141
-> Epoch: 141, Learning Rate: 0.6, Error: 0.01742531035054889
-> Epoch: 142, Learning Rate: 0.6, Error: 0.017348115688113643
-> Epoch: 143, Learning Rate: 0.6, Error: 0.01727269296628409
-> Epoch: 144, Learning Rate: 0.6, Error: 0.01719899231214933
-> Epoch: 145, Learning Rate: 0.6, Error: 0.017126965471568372
-> Epoch: 146, Learning Rate: 0.6, Error: 0.01705656574843398
-> Epoch: 147, Learning Rate: 0.6, Error: 0.01698774794663514
-> Epoch: 148, Learning Rate: 0.6, Error: 0.016920468314572477
-> Epoch: 149, Learning Rate: 0.6, Error: 0.016854684492090325
-> Epoch: 150, Learning Rate: 0.6, Error: 0.01679035545969897
-> Epoch: 151, Learning Rate: 0.6, Error: 0.016727441489966913
-> Epoch: 152, Learning Rate: 0.6, Error: 0.01666590410097197
-> Epoch: 153, Learning Rate: 0.6, Error: 0.016605706011706717
-> Epoch: 154, Learning Rate: 0.6, Error: 0.016546811099339486
-> Epoch: 155, Learning Rate: 0.6, Error: 0.016489184358239026
-> Epoch: 156, Learning Rate: 0.6, Error: 0.016432791860676175
-> Epoch: 157, Learning Rate: 0.6, Error: 0.016377600719120596
-> Epoch: 158, Learning Rate: 0.6, Error: 0.016323579050056554
-> Epoch: 159, Learning Rate: 0.6, Error: 0.016270695939244732
-> Epoch: 160, Learning Rate: 0.6, Error: 0.016218921408362372
-> Epoch: 161, Learning Rate: 0.6, Error: 0.01616822638295756
-> Epoch: 162, Learning Rate: 0.6, Error: 0.016118582661656573
-> Epoch: 163, Learning Rate: 0.6, Error: 0.016069962886567726
-> Epoch: 164, Learning Rate: 0.6, Error: 0.016022340514826584
-> Epoch: 165, Learning Rate: 0.6, Error: 0.015975689791232428
-> Epoch: 166, Learning Rate: 0.6, Error: 0.01592998572192657
-> Epoch: 167, Learning Rate: 0.6, Error: 0.015885204049066976
-> Epoch: 168, Learning Rate: 0.6, Error: 0.015841321226455745
-> Epoch: 169, Learning Rate: 0.6, Error: 0.015798314396078206
-> Epoch: 170, Learning Rate: 0.6, Error: 0.01575616136551418
-> Epoch: 171, Learning Rate: 0.6, Error: 0.015714840586184244
-> Epoch: 172, Learning Rate: 0.6, Error: 0.01567433113239635
-> Epoch: 173, Learning Rate: 0.6, Error: 0.01563461268115774
-> Epoch: 174, Learning Rate: 0.6, Error: 0.015595665492722482
-> Epoch: 175, Learning Rate: 0.6, Error: 0.015557470391841523
-> Epoch: 176, Learning Rate: 0.6, Error: 0.015520008749688891
-> Epoch: 177, Learning Rate: 0.6, Error: 0.015483262466434597
-> Epoch: 178, Learning Rate: 0.6, Error: 0.015447213954439133
-> Epoch: 179, Learning Rate: 0.6, Error: 0.015411846122044088
-> Epoch: 180, Learning Rate: 0.6, Error: 0.015377142357934739
-> Epoch: 181, Learning Rate: 0.6, Error: 0.015343086516052809
-> Epoch: 182, Learning Rate: 0.6, Error: 0.015309662901036325
-> Epoch: 183, Learning Rate: 0.6, Error: 0.015276856254167295
-> Epoch: 184, Learning Rate: 0.6, Error: 0.015244651739805933
-> Epoch: 185, Learning Rate: 0.6, Error: 0.015213034932293687
-> Epoch: 186, Learning Rate: 0.6, Error: 0.015181991803305992
-> Epoch: 187, Learning Rate: 0.6, Error: 0.015151508709638582
-> Epoch: 188, Learning Rate: 0.6, Error: 0.015121572381409543
-> Epoch: 189, Learning Rate: 0.6, Error: 0.015092169910662164
-> Epoch: 190, Learning Rate: 0.6, Error: 0.01506328874035304
-> Epoch: 191, Learning Rate: 0.6, Error: 0.015034916653711155
-> Epoch: 192, Learning Rate: 0.6, Error: 0.015007041763953496
-> Epoch: 193, Learning Rate: 0.6, Error: 0.014979652504344982
-> Epoch: 194, Learning Rate: 0.6, Error: 0.014952737618588677
-> Epoch: 195, Learning Rate: 0.6, Error: 0.01492628615153468
-> Epoch: 196, Learning Rate: 0.6, Error: 0.014900287440196622
-> Epoch: 197, Learning Rate: 0.6, Error: 0.014874731105062749
-> Epoch: 198, Learning Rate: 0.6, Error: 0.014849607041693
-> Epoch: 199, Learning Rate: 0.6, Error: 0.01482490541259005
-> Epoch: 200, Learning Rate: 0.6, Error: 0.014800616639335124
-> Epoch: 201, Learning Rate: 0.6, Error: 0.014776731394979271
-> Epoch: 202, Learning Rate: 0.6, Error: 0.014753240596680048
-> Epoch: 203, Learning Rate: 0.6, Error: 0.014730135398576132
-> Epoch: 204, Learning Rate: 0.6, Error: 0.014707407184890242
-> Epoch: 205, Learning Rate: 0.6, Error: 0.014685047563252946
-> Epoch: 206, Learning Rate: 0.6, Error: 0.014663048358239469
-> Epoch: 207, Learning Rate: 0.6, Error: 0.014641401605111999
-> Epoch: 208, Learning Rate: 0.6, Error: 0.014620099543760003
-> Epoch: 209, Learning Rate: 0.6, Error: 0.014599134612832357
-> Epoch: 210, Learning Rate: 0.6, Error: 0.014578499444053747
-> Epoch: 211, Learning Rate: 0.6, Error: 0.014558186856720012
-> Epoch: 212, Learning Rate: 0.6, Error: 0.014538189852365005
-> Epoch: 213, Learning Rate: 0.6, Error: 0.014518501609594477
-> Epoch: 214, Learning Rate: 0.6, Error: 0.014499115479080098
-> Epoch: 215, Learning Rate: 0.6, Error: 0.014480024978708905
-> Epoch: 216, Learning Rate: 0.6, Error: 0.014461223788882531
-> Epoch: 217, Learning Rate: 0.6, Error: 0.014442705747961245
-> Epoch: 218, Learning Rate: 0.6, Error: 0.014424464847848208
-> Epoch: 219, Learning Rate: 0.6, Error: 0.01440649522970858
-> Epoch: 220, Learning Rate: 0.6, Error: 0.01438879117981986
-> Epoch: 221, Learning Rate: 0.6, Error: 0.014371347125547995
-> Epoch: 222, Learning Rate: 0.6, Error: 0.014354157631446183
-> Epoch: 223, Learning Rate: 0.6, Error: 0.014337217395471667
-> Epoch: 224, Learning Rate: 0.6, Error: 0.01432052124531671
-> Epoch: 225, Learning Rate: 0.6, Error: 0.014304064134849965
-> Epoch: 226, Learning Rate: 0.6, Error: 0.014287841140664908
-> Epoch: 227, Learning Rate: 0.6, Error: 0.014271847458731465
-> Epoch: 228, Learning Rate: 0.6, Error: 0.014256078401147655
-> Epoch: 229, Learning Rate: 0.6, Error: 0.014240529392988201
-> Epoch: 230, Learning Rate: 0.6, Error: 0.014225195969246311
-> Epoch: 231, Learning Rate: 0.6, Error: 0.014210073771866541
-> Epoch: 232, Learning Rate: 0.6, Error: 0.014195158546864898
-> Epoch: 233, Learning Rate: 0.6, Error: 0.014180446141534216
-> Epoch: 234, Learning Rate: 0.6, Error: 0.014165932501731399
-> Epoch: 235, Learning Rate: 0.6, Error: 0.014151613669244183
-> Epoch: 236, Learning Rate: 0.6, Error: 0.014137485779235116
-> Epoch: 237, Learning Rate: 0.6, Error: 0.014123545057759835
-> Epoch: 238, Learning Rate: 0.6, Error: 0.014109787819357872
-> Epoch: 239, Learning Rate: 0.6, Error: 0.014096210464712954
-> Epoch: 240, Learning Rate: 0.6, Error: 0.014082809478381527
-> Epoch: 241, Learning Rate: 0.6, Error: 0.01406958142658632
-> Epoch: 242, Learning Rate: 0.6, Error: 0.014056522955073899
-> Epoch: 243, Learning Rate: 0.6, Error: 0.014043630787033742
-> Epoch: 244, Learning Rate: 0.6, Error: 0.014030901721076782
-> Epoch: 245, Learning Rate: 0.6, Error: 0.014018332629271695
-> Epoch: 246, Learning Rate: 0.6, Error: 0.014005920455237696
-> Epoch: 247, Learning Rate: 0.6, Error: 0.013993662212290954
-> Epoch: 248, Learning Rate: 0.6, Error: 0.013981554981644082
-> Epoch: 249, Learning Rate: 0.6, Error: 0.013969595910656538
+[0.17317818956819403, 0.9800851433251829, 0.42724998309569323, 0.08046423546177378, 0.9219269793662461, 0.6609505844415984, 0.02117025983830767]
+[0.9800851433251829, 0.42724998309569323, 0.08046423546177378, 0.9219269793662461, 0.6609505844415984, 0.05192656710835188, 0.8301583541220401]
+[0.42724998309569323, 0.08046423546177378, 0.9219269793662461, 0.6609505844415984, 0.05192656710835188, 0.8211788845435862, 0.704041030906696]
+[0.08046423546177378, 0.9219269793662461, 0.6609505844415984, 0.05192656710835188, 0.8211788845435862, 0.7129702347399242, 1.95868026814372e-05]
+[0.9219269793662461, 0.6609505844415984, 0.05192656710835188, 0.8211788845435862, 0.7129702347399242, 0.04423561446986668, 0.7120895036684984]
+[0.6609505844415984, 0.05192656710835188, 0.8211788845435862, 0.7129702347399242, 0.04423561446986668, 0.70315516684159, 0.8234596611643201]
+[0.05192656710835188, 0.8211788845435862, 0.7129702347399242, 0.04423561446986668, 0.70315516684159, 0.8145884316348424, 0.018697066843216703]
+[0.8211788845435862, 0.7129702347399242, 0.04423561446986668, 0.70315516684159, 0.8145884316348424, 0.05422265561718953, 0.577125724943792]
+[0.7129702347399242, 0.04423561446986668, 0.70315516684159, 0.8145884316348424, 0.05422265561718953, 0.5682161662027956, 0.9171116802532551]
+[0.04423561446986668, 0.70315516684159, 0.8145884316348424, 0.05422265561718953, 0.5682161662027956, 0.899174163711189, 0.07571486260769739]
+> Epoch: 0, Learning Rate: 0.6, Error: 0.6762889487654342
+> Epoch: 1, Learning Rate: 0.6, Error: 0.4863705691551068
+> Epoch: 2, Learning Rate: 0.6, Error: 0.3787114992872386
+> Epoch: 3, Learning Rate: 0.6, Error: 0.3172052239179039
+> Epoch: 4, Learning Rate: 0.6, Error: 0.27900879513342686
+> Epoch: 5, Learning Rate: 0.6, Error: 0.2522978959083143
+> Epoch: 6, Learning Rate: 0.6, Error: 0.2315258140688603
+> Epoch: 7, Learning Rate: 0.6, Error: 0.21416178876104228
+> Epoch: 8, Learning Rate: 0.6, Error: 0.1990188776989321
+> Epoch: 9, Learning Rate: 0.6, Error: 0.1854975976530146
+> Epoch: 10, Learning Rate: 0.6, Error: 0.17326072261011538
+> Epoch: 11, Learning Rate: 0.6, Error: 0.16209471306073894
+> Epoch: 12, Learning Rate: 0.6, Error: 0.1518495141535688
+> Epoch: 13, Learning Rate: 0.6, Error: 0.14241125080545017
+> Epoch: 14, Learning Rate: 0.6, Error: 0.13368900617987814
+> Epoch: 15, Learning Rate: 0.6, Error: 0.1256078486725284
+> Epoch: 16, Learning Rate: 0.6, Error: 0.11810477573191955
+> Epoch: 17, Learning Rate: 0.6, Error: 0.11112611165338299
+> Epoch: 18, Learning Rate: 0.6, Error: 0.10462568959387958
+> Epoch: 19, Learning Rate: 0.6, Error: 0.0985634951186887
+> Epoch: 20, Learning Rate: 0.6, Error: 0.09290460628293988
+> Epoch: 21, Learning Rate: 0.6, Error: 0.08761834008541833
+> Epoch: 22, Learning Rate: 0.6, Error: 0.08267755239439256
+> Epoch: 23, Learning Rate: 0.6, Error: 0.0780580579649688
+> Epoch: 24, Learning Rate: 0.6, Error: 0.07373814792984272
+> Epoch: 25, Learning Rate: 0.6, Error: 0.06969818838239758
+> Epoch: 26, Learning Rate: 0.6, Error: 0.06592028746369186
+> Epoch: 27, Learning Rate: 0.6, Error: 0.062388020784659694
+> Epoch: 28, Learning Rate: 0.6, Error: 0.059086206640692834
+> Epoch: 29, Learning Rate: 0.6, Error: 0.05600072363474715
+> Epoch: 30, Learning Rate: 0.6, Error: 0.05311836420884158
+> Epoch: 31, Learning Rate: 0.6, Error: 0.05042671830686393
+> Epoch: 32, Learning Rate: 0.6, Error: 0.047914082022237646
+> Epoch: 33, Learning Rate: 0.6, Error: 0.04556938666141779
+> Epoch: 34, Learning Rate: 0.6, Error: 0.04338214419876963
+> Epoch: 35, Learning Rate: 0.6, Error: 0.04134240561849039
+> Epoch: 36, Learning Rate: 0.6, Error: 0.0394407291357855
+> Epoch: 37, Learning Rate: 0.6, Error: 0.03766815575930046
+> Epoch: 38, Learning Rate: 0.6, Error: 0.036016190094912415
+> Epoch: 39, Learning Rate: 0.6, Error: 0.034476784692337135
+> Epoch: 40, Learning Rate: 0.6, Error: 0.033042326596497716
+> Epoch: 41, Learning Rate: 0.6, Error: 0.03170562508261307
+> Epoch: 42, Learning Rate: 0.6, Error: 0.03045989982657989
+> Epoch: 43, Learning Rate: 0.6, Error: 0.029298768991178017
+> Epoch: 44, Learning Rate: 0.6, Error: 0.02821623689607173
+> Epoch: 45, Learning Rate: 0.6, Error: 0.027206681088759645
+> Epoch: 46, Learning Rate: 0.6, Error: 0.02626483874853286
+> Epoch: 47, Learning Rate: 0.6, Error: 0.02538579244055378
+> Epoch: 48, Learning Rate: 0.6, Error: 0.024564955296891386
+> Epoch: 49, Learning Rate: 0.6, Error: 0.023798055740165074
+> Epoch: 50, Learning Rate: 0.6, Error: 0.023081121887498387
+> Epoch: 51, Learning Rate: 0.6, Error: 0.02241046578148351
+> Epoch: 52, Learning Rate: 0.6, Error: 0.021782667594091337
+> Epoch: 53, Learning Rate: 0.6, Error: 0.021194559941692774
+> Epoch: 54, Learning Rate: 0.6, Error: 0.020643212436896506
+> Epoch: 55, Learning Rate: 0.6, Error: 0.020125916587592073
+> Epoch: 56, Learning Rate: 0.6, Error: 0.019640171136875623
+> Epoch: 57, Learning Rate: 0.6, Error: 0.01918366792050789
+> Epoch: 58, Learning Rate: 0.6, Error: 0.01875427830200975
+> Epoch: 59, Learning Rate: 0.6, Error: 0.018350040229989373
+> Epoch: 60, Learning Rate: 0.6, Error: 0.01796914594815741
+> Epoch: 61, Learning Rate: 0.6, Error: 0.017609930375925436
+> Epoch: 62, Learning Rate: 0.6, Error: 0.017270860166568893
+> Epoch: 63, Learning Rate: 0.6, Error: 0.016950523440660174
+> Epoch: 64, Learning Rate: 0.6, Error: 0.016647620184773327
+> Epoch: 65, Learning Rate: 0.6, Error: 0.016360953299213703
+> Epoch: 66, Learning Rate: 0.6, Error: 0.016089420273604167
+> Epoch: 67, Learning Rate: 0.6, Error: 0.015832005465417406
+> Epoch: 68, Learning Rate: 0.6, Error: 0.015587772953831265
+> Epoch: 69, Learning Rate: 0.6, Error: 0.015355859939459714
+> Epoch: 70, Learning Rate: 0.6, Error: 0.015135470659436679
+> Epoch: 71, Learning Rate: 0.6, Error: 0.014925870786877758
+> Epoch: 72, Learning Rate: 0.6, Error: 0.014726382283805437
+> Epoch: 73, Learning Rate: 0.6, Error: 0.014536378677090619
+> Epoch: 74, Learning Rate: 0.6, Error: 0.014355280727751697
+> Epoch: 75, Learning Rate: 0.6, Error: 0.014182552464986859
+> Epoch: 76, Learning Rate: 0.6, Error: 0.014017697557526814
+> Epoch: 77, Learning Rate: 0.6, Error: 0.01386025599623157
+> Epoch: 78, Learning Rate: 0.6, Error: 0.013709801063272735
+> Epoch: 79, Learning Rate: 0.6, Error: 0.013565936564697489
+> Epoch: 80, Learning Rate: 0.6, Error: 0.013428294304642194
+> Epoch: 81, Learning Rate: 0.6, Error: 0.013296531780918023
+> Epoch: 82, Learning Rate: 0.6, Error: 0.013170330083118534
+> Epoch: 83, Learning Rate: 0.6, Error: 0.013049391975777792
+> Epoch: 84, Learning Rate: 0.6, Error: 0.01293344015043418
+> Epoch: 85, Learning Rate: 0.6, Error: 0.012822215631716349
+> Epoch: 86, Learning Rate: 0.6, Error: 0.012715476323762178
+> Epoch: 87, Learning Rate: 0.6, Error: 0.012612995684406884
+> Epoch: 88, Learning Rate: 0.6, Error: 0.012514561515628818
+> Epoch: 89, Learning Rate: 0.6, Error: 0.012419974859724618
+> Epoch: 90, Learning Rate: 0.6, Error: 0.012329048991597976
+> Epoch: 91, Learning Rate: 0.6, Error: 0.012241608498391622
+> Epoch: 92, Learning Rate: 0.6, Error: 0.012157488438473762
+> Epoch: 93, Learning Rate: 0.6, Error: 0.012076533572508237
+> Epoch: 94, Learning Rate: 0.6, Error: 0.011998597659998982
+> Epoch: 95, Learning Rate: 0.6, Error: 0.011923542815304661
+> Epoch: 96, Learning Rate: 0.6, Error: 0.01185123891767422
+> Epoch: 97, Learning Rate: 0.6, Error: 0.011781563070359163
+> Epoch: 98, Learning Rate: 0.6, Error: 0.011714399104321212
+> Epoch: 99, Learning Rate: 0.6, Error: 0.011649637122473432
+> Epoch: 100, Learning Rate: 0.6, Error: 0.011587173080776033
+> Epoch: 101, Learning Rate: 0.6, Error: 0.011526908402854776
+> Epoch: 102, Learning Rate: 0.6, Error: 0.01146874962512547
+> Epoch: 103, Learning Rate: 0.6, Error: 0.011412608069693833
+> Epoch: 104, Learning Rate: 0.6, Error: 0.011358399542558515
+> Epoch: 105, Learning Rate: 0.6, Error: 0.011306044054880065
+> Epoch: 106, Learning Rate: 0.6, Error: 0.011255465565289646
+> Epoch: 107, Learning Rate: 0.6, Error: 0.01120659174140463
+> Epoch: 108, Learning Rate: 0.6, Error: 0.011159353738889084
+> Epoch: 109, Learning Rate: 0.6, Error: 0.011113685996556006
+> Epoch: 110, Learning Rate: 0.6, Error: 0.011069526046147854
+> Epoch: 111, Learning Rate: 0.6, Error: 0.011026814335560176
+> Epoch: 112, Learning Rate: 0.6, Error: 0.01098549406438817
+> Epoch: 113, Learning Rate: 0.6, Error: 0.010945511030779911
+> Epoch: 114, Learning Rate: 0.6, Error: 0.010906813488673887
+> Epoch: 115, Learning Rate: 0.6, Error: 0.010869352014582695
+> Epoch: 116, Learning Rate: 0.6, Error: 0.010833079383161933
+> Epoch: 117, Learning Rate: 0.6, Error: 0.010797950450871573
+> Epoch: 118, Learning Rate: 0.6, Error: 0.01076392204709952
+> Epoch: 119, Learning Rate: 0.6, Error: 0.010730952872173682
+> Epoch: 120, Learning Rate: 0.6, Error: 0.010699003401739222
+> Epoch: 121, Learning Rate: 0.6, Error: 0.010668035797023403
+> Epoch: 122, Learning Rate: 0.6, Error: 0.010638013820552886
+> Epoch: 123, Learning Rate: 0.6, Error: 0.010608902756924584
+> Epoch: 124, Learning Rate: 0.6, Error: 0.010580669338265786
+> Epoch: 125, Learning Rate: 0.6, Error: 0.010553281674050523
+> Epoch: 126, Learning Rate: 0.6, Error: 0.010526709184965675
+> Epoch: 127, Learning Rate: 0.6, Error: 0.010500922540546822
+> Epoch: 128, Learning Rate: 0.6, Error: 0.010475893600325964
+> Epoch: 129, Learning Rate: 0.6, Error: 0.010451595358254441
+> Epoch: 130, Learning Rate: 0.6, Error: 0.010428001890182994
+> Epoch: 131, Learning Rate: 0.6, Error: 0.010405088304198304
+> Epoch: 132, Learning Rate: 0.6, Error: 0.010382830693630793
+> Epoch: 133, Learning Rate: 0.6, Error: 0.010361206092562615
+> Epoch: 134, Learning Rate: 0.6, Error: 0.010340192433678445
+> Epoch: 135, Learning Rate: 0.6, Error: 0.010319768508312024
+> Epoch: 136, Learning Rate: 0.6, Error: 0.010299913928554241
+> Epoch: 137, Learning Rate: 0.6, Error: 0.010280609091296388
+> Epoch: 138, Learning Rate: 0.6, Error: 0.010261835144092889
+> Epoch: 139, Learning Rate: 0.6, Error: 0.010243573952735023
+> Epoch: 140, Learning Rate: 0.6, Error: 0.010225808070435181
+> Epoch: 141, Learning Rate: 0.6, Error: 0.010208520708528573
+> Epoch: 142, Learning Rate: 0.6, Error: 0.01019169570860432
+> Epoch: 143, Learning Rate: 0.6, Error: 0.010175317515986096
+> Epoch: 144, Learning Rate: 0.6, Error: 0.010159371154485052
+> Epoch: 145, Learning Rate: 0.6, Error: 0.010143842202355301
+> Epoch: 146, Learning Rate: 0.6, Error: 0.010128716769385334
+> Epoch: 147, Learning Rate: 0.6, Error: 0.010113981475063342
+> Epoch: 148, Learning Rate: 0.6, Error: 0.010099623427758955
+> Epoch: 149, Learning Rate: 0.6, Error: 0.010085630204866457
+> Epoch: 150, Learning Rate: 0.6, Error: 0.0100719898338591
+> Epoch: 151, Learning Rate: 0.6, Error: 0.010058690774206095
+> Epoch: 152, Learning Rate: 0.6, Error: 0.010045721900107963
+> Epoch: 153, Learning Rate: 0.6, Error: 0.010033072484007737
+> Epoch: 154, Learning Rate: 0.6, Error: 0.010020732180838196
+> Epoch: 155, Learning Rate: 0.6, Error: 0.010008691012967946
+> Epoch: 156, Learning Rate: 0.6, Error: 0.009996939355811293
+> Epoch: 157, Learning Rate: 0.6, Error: 0.009985467924068589
+> Epoch: 158, Learning Rate: 0.6, Error: 0.009974267758565431
+> Epoch: 159, Learning Rate: 0.6, Error: 0.009963330213662221
+> Epoch: 160, Learning Rate: 0.6, Error: 0.00995264694520514
+> Epoch: 161, Learning Rate: 0.6, Error: 0.009942209898992983
+> Epoch: 162, Learning Rate: 0.6, Error: 0.009932011299734768
+> Epoch: 163, Learning Rate: 0.6, Error: 0.009922043640474519
+> Epoch: 164, Learning Rate: 0.6, Error: 0.009912299672461397
+> Epoch: 165, Learning Rate: 0.6, Error: 0.009902772395443873
+> Epoch: 166, Learning Rate: 0.6, Error: 0.00989345504836773
+> Epoch: 167, Learning Rate: 0.6, Error: 0.009884341100460235
+> Epoch: 168, Learning Rate: 0.6, Error: 0.009875424242680866
+> Epoch: 169, Learning Rate: 0.6, Error: 0.009866698379523474
+> Epoch: 170, Learning Rate: 0.6, Error: 0.00985815762115249
+> Epoch: 171, Learning Rate: 0.6, Error: 0.009849796275858587
+> Epoch: 172, Learning Rate: 0.6, Error: 0.009841608842819446
+> Epoch: 173, Learning Rate: 0.6, Error: 0.009833590005151275
+> Epoch: 174, Learning Rate: 0.6, Error: 0.009825734623238958
+> Epoch: 175, Learning Rate: 0.6, Error: 0.009818037728331626
+> Epoch: 176, Learning Rate: 0.6, Error: 0.009810494516392336
+> Epoch: 177, Learning Rate: 0.6, Error: 0.009803100342190786
+> Epoch: 178, Learning Rate: 0.6, Error: 0.009795850713628037
+> Epoch: 179, Learning Rate: 0.6, Error: 0.009788741286283343
+> Epoch: 180, Learning Rate: 0.6, Error: 0.00978176785817366
+> Epoch: 181, Learning Rate: 0.6, Error: 0.009774926364716255
+> Epoch: 182, Learning Rate: 0.6, Error: 0.009768212873886111
+> Epoch: 183, Learning Rate: 0.6, Error: 0.009761623581559478
+> Epoch: 184, Learning Rate: 0.6, Error: 0.009755154807036042
+> Epoch: 185, Learning Rate: 0.6, Error: 0.009748802988731651
+> Epoch: 186, Learning Rate: 0.6, Error: 0.009742564680034886
+> Epoch: 187, Learning Rate: 0.6, Error: 0.009736436545320653
+> Epoch: 188, Learning Rate: 0.6, Error: 0.009730415356113638
+> Epoch: 189, Learning Rate: 0.6, Error: 0.009724497987396193
+> Epoch: 190, Learning Rate: 0.6, Error: 0.009718681414054008
+> Epoch: 191, Learning Rate: 0.6, Error: 0.009712962707454602
+> Epoch: 192, Learning Rate: 0.6, Error: 0.0097073390321525
+> Epoch: 193, Learning Rate: 0.6, Error: 0.009701807642716545
+> Epoch: 194, Learning Rate: 0.6, Error: 0.009696365880673744
+> Epoch: 195, Learning Rate: 0.6, Error: 0.009691011171565735
+> Epoch: 196, Learning Rate: 0.6, Error: 0.009685741022112622
+> Epoch: 197, Learning Rate: 0.6, Error: 0.00968055301748036
+> Epoch: 198, Learning Rate: 0.6, Error: 0.00967544481864721
+> Epoch: 199, Learning Rate: 0.6, Error: 0.00967041415986575
+> Epoch: 200, Learning Rate: 0.6, Error: 0.009665458846216238
+> Epoch: 201, Learning Rate: 0.6, Error: 0.00966057675124793
+> Epoch: 202, Learning Rate: 0.6, Error: 0.009655765814705133
+> Epoch: 203, Learning Rate: 0.6, Error: 0.009651024040334012
+> Epoch: 204, Learning Rate: 0.6, Error: 0.00964634949376793
+> Epoch: 205, Learning Rate: 0.6, Error: 0.009641740300487402
+> Epoch: 206, Learning Rate: 0.6, Error: 0.009637194643852452
+> Epoch: 207, Learning Rate: 0.6, Error: 0.009632710763204209
+> Epoch: 208, Learning Rate: 0.6, Error: 0.009628286952033101
+> Epoch: 209, Learning Rate: 0.6, Error: 0.00962392155621142
+> Epoch: 210, Learning Rate: 0.6, Error: 0.0096196129722874
+> Epoch: 211, Learning Rate: 0.6, Error: 0.009615359645838924
+> Epoch: 212, Learning Rate: 0.6, Error: 0.009611160069883974
+> Epoch: 213, Learning Rate: 0.6, Error: 0.00960701278334654
+> Epoch: 214, Learning Rate: 0.6, Error: 0.009602916369575118
+> Epoch: 215, Learning Rate: 0.6, Error: 0.009598869454912295
+> Epoch: 216, Learning Rate: 0.6, Error: 0.009594870707313446
+> Epoch: 217, Learning Rate: 0.6, Error: 0.00959091883501257
+> Epoch: 218, Learning Rate: 0.6, Error: 0.00958701258523376
+> Epoch: 219, Learning Rate: 0.6, Error: 0.009583150742946451
+> Epoch: 220, Learning Rate: 0.6, Error: 0.009579332129662733
+> Epoch: 221, Learning Rate: 0.6, Error: 0.009575555602275592
+> Epoch: 222, Learning Rate: 0.6, Error: 0.009571820051936374
+> Epoch: 223, Learning Rate: 0.6, Error: 0.00956812440296969
+> Epoch: 224, Learning Rate: 0.6, Error: 0.009564467611825032
+> Epoch: 225, Learning Rate: 0.6, Error: 0.009560848666063411
+> Epoch: 226, Learning Rate: 0.6, Error: 0.009557266583377943
+> Epoch: 227, Learning Rate: 0.6, Error: 0.009553720410646784
+> Epoch: 228, Learning Rate: 0.6, Error: 0.009550209223017624
+> Epoch: 229, Learning Rate: 0.6, Error: 0.009546732123022957
+> Epoch: 230, Learning Rate: 0.6, Error: 0.00954328823972379
+> Epoch: 231, Learning Rate: 0.6, Error: 0.009539876727882278
+> Epoch: 232, Learning Rate: 0.6, Error: 0.009536496767161388
+> Epoch: 233, Learning Rate: 0.6, Error: 0.009533147561350696
+> Epoch: 234, Learning Rate: 0.6, Error: 0.009529828337617731
+> Epoch: 235, Learning Rate: 0.6, Error: 0.009526538345783514
+> Epoch: 236, Learning Rate: 0.6, Error: 0.009523276857622184
+> Epoch: 237, Learning Rate: 0.6, Error: 0.009520043166183038
+> Epoch: 238, Learning Rate: 0.6, Error: 0.009516836585134426
+> Epoch: 239, Learning Rate: 0.6, Error: 0.009513656448129515
+> Epoch: 240, Learning Rate: 0.6, Error: 0.009510502108191887
+> Epoch: 241, Learning Rate: 0.6, Error: 0.009507372937121531
+> Epoch: 242, Learning Rate: 0.6, Error: 0.00950426832491937
+> Epoch: 243, Learning Rate: 0.6, Error: 0.009501187679230777
+> Epoch: 244, Learning Rate: 0.6, Error: 0.009498130424806678
+> Epoch: 245, Learning Rate: 0.6, Error: 0.009495096002981948
+> Epoch: 246, Learning Rate: 0.6, Error: 0.009492083871170402
+> Epoch: 247, Learning Rate: 0.6, Error: 0.009489093502376048
+> Epoch: 248, Learning Rate: 0.6, Error: 0.009486124384719609
+> Epoch: 249, Learning Rate: 0.6, Error: 0.009483176020980373
 Input: [2.0, 4.0, 6.0, 8.0, 10.0, 12.0] with expected output: 14.0
-given x: 2.0, generated y: 0.5466669806036659, predicted y: 0.5683686091039168, error: 0.021701628500250925
+given x: 12.0, generated y: 0.5391670327232512, predicted y: 0.5683686091039168, error: 0.029201576380665673
 
 Input: [4.0, 6.0, 8.0, 10.0, 12.0, 14.0] with expected output: 16.0
-given x: 4.0, generated y: 0.04561007603912222, predicted y: 0.02117025983830767, error: 0.02443981620081455
+given x: 14.0, generated y: 0.041989332182714154, predicted y: 0.02117025983830767, error: 0.020819072344406483
 
 Input: [6.0, 8.0, 10.0, 12.0, 14.0, 16.0] with expected output: 18.0
-given x: 6.0, generated y: 0.8244064199801914, predicted y: 0.8301583541220401, error: 0.0057519341418487135
+given x: 16.0, generated y: 0.8426499906031822, predicted y: 0.8301583541220401, error: 0.012491636481142154
 
 Input: [8.0, 10.0, 12.0, 14.0, 16.0, 18.0] with expected output: 20.0
-given x: 8.0, generated y: 0.7406575653830022, predicted y: 0.704041030906696, error: 0.036616534476306195
+given x: 18.0, generated y: 0.7302045316401823, predicted y: 0.704041030906696, error: 0.026163500733486278
 
 Input: [10.0, 12.0, 14.0, 16.0, 18.0, 20.0] with expected output: 22.0
-given x: 10.0, generated y: 0.04359468469285527, predicted y: 1.95868026814372e-05, error: 0.04357509789017383
+given x: 20.0, generated y: 0.03850670585555169, predicted y: 1.95868026814372e-05, error: 0.03848711905287025
 
 Input: [12.0, 14.0, 16.0, 18.0, 20.0, 22.0] with expected output: 24.0
-given x: 12.0, generated y: 0.7558289552609739, predicted y: 0.7120895036684984, error: 0.0437394515924755
+given x: 22.0, generated y: 0.7557131924749779, predicted y: 0.7120895036684984, error: 0.04362368880647949
 
 Input: [14.0, 16.0, 18.0, 20.0, 22.0, 24.0] with expected output: 26.0
-given x: 14.0, generated y: 0.8210554469192448, predicted y: 0.8234596611643201, error: 0.002404214245075309
+given x: 24.0, generated y: 0.8309157001404889, predicted y: 0.8234596611643201, error: 0.007456038976168755
 
 Input: [16.0, 18.0, 20.0, 22.0, 24.0, 26.0] with expected output: 28.0
-given x: 16.0, generated y: 0.045454660684476005, predicted y: 0.018697066843216703, error: 0.0267575938412593
+given x: 26.0, generated y: 0.04086215642423006, predicted y: 0.018697066843216703, error: 0.022165089581013354
 
 Input: [18.0, 20.0, 22.0, 24.0, 26.0, 28.0] with expected output: 30.0
-given x: 18.0, generated y: 0.5864546493077627, predicted y: 0.577125724943792, error: 0.009328924363970703
+given x: 28.0, generated y: 0.5824699908630248, predicted y: 0.577125724943792, error: 0.00534426591923276
 
 Input: [20.0, 22.0, 24.0, 26.0, 28.0, 30.0] with expected output: 32.0
-given x: 20.0, generated y: 0.8514026426926655, predicted y: 0.9171116802532551, error: 0.06570903756058954
+given x: 30.0, generated y: 0.8765272589055503, predicted y: 0.9171116802532551, error: 0.04058442134770479
 
 Input: [22.0, 24.0, 26.0, 28.0, 30.0, 32.0] with expected output: 34.0
-given x: 22.0, generated y: 0.052330270531806666, predicted y: 0.07571486260769739, error: 0.02338459207589072
+given x: 32.0, generated y: 0.05080268554316763, predicted y: 0.07571486260769739, error: 0.024912177064529757
 
 Input: [24.0, 26.0, 28.0, 30.0, 32.0, 34.0] with expected output: 36.0
-given x: 24.0, generated y: 0.3182499436123481, predicted y: 0.43601815518629766, error: 0.11776821157394957
+given x: 34.0, generated y: 0.34603558264215584, predicted y: 0.43601815518629766, error: 0.08998257254414183
 
 Input: [26.0, 28.0, 30.0, 32.0, 34.0, 36.0] with expected output: 38.0
-given x: 26.0, generated y: 0.8628650119826269, predicted y: 0.9775368220236474, error: 0.11467181004102056
+given x: 36.0, generated y: 0.896145457962882, predicted y: 0.9775368220236474, error: 0.08139136406076541
 
 Input: [28.0, 30.0, 32.0, 34.0, 36.0, 38.0] with expected output: 40.0
-given x: 28.0, generated y: 0.07010988028131496, predicted y: 0.16653096917386906, error: 0.0964210888925541
+given x: 38.0, generated y: 0.07659604019799846, predicted y: 0.16653096917386906, error: 0.0899349289758706
 
 Input: [30.0, 32.0, 34.0, 36.0, 38.0, 40.0] with expected output: 42.0
-given x: 30.0, generated y: 0.14022033908855872, predicted y: 0.3000073425058244, error: 0.15978700341726568
+given x: 40.0, generated y: 0.16958546095417798, predicted y: 0.3000073425058244, error: 0.1304218815516464
 
 Input: [32.0, 34.0, 36.0, 38.0, 40.0, 42.0] with expected output: 44.0
-given x: 32.0, generated y: 0.8657823985509496, predicted y: 0.9999216543238456, error: 0.13413925577289598
+given x: 42.0, generated y: 0.9023144833027651, predicted y: 0.9999216543238456, error: 0.09760717102108052
 
 Input: [34.0, 36.0, 38.0, 40.0, 42.0, 44.0] with expected output: 46.0
-given x: 34.0, generated y: 0.12011645437097834, predicted y: 0.2839110275576109, error: 0.16379457318663254
+given x: 44.0, generated y: 0.1419718468103835, predicted y: 0.2839110275576109, error: 0.1419391807472274
 
 Input: [36.0, 38.0, 40.0, 42.0, 44.0, 46.0] with expected output: 48.0
-given x: 36.0, generated y: 0.07581841186441904, predicted y: 0.17992783026540016, error: 0.10410941840098112
+given x: 46.0, generated y: 0.08762472691587188, predicted y: 0.17992783026540016, error: 0.09230310334952828
 
 Input: [38.0, 40.0, 42.0, 44.0, 46.0, 48.0] with expected output: 50.0
-given x: 38.0, generated y: 0.8628144758641413, predicted y: 0.9824830142460567, error: 0.11966853838191538
+given x: 48.0, generated y: 0.8986854932321513, predicted y: 0.9824830142460567, error: 0.08379752101390536
 
 Input: [40.0, 42.0, 44.0, 46.0, 48.0, 50.0] with expected output: 52.0
-given x: 40.0, generated y: 0.26464182349533166, predicted y: 0.41850460960214725, error: 0.15386278610681559
+given x: 50.0, generated y: 0.29208765196150127, predicted y: 0.41850460960214725, error: 0.12641695764064598
 
 Input: [42.0, 44.0, 46.0, 48.0, 50.0, 52.0] with expected output: 54.0
-given x: 42.0, generated y: 0.053946646968665024, predicted y: 0.0853450835684249, error: 0.03139843659975988
+given x: 52.0, generated y: 0.05513399904259729, predicted y: 0.0853450835684249, error: 0.030211084525827617
 
 Input: [44.0, 46.0, 48.0, 50.0, 52.0, 54.0] with expected output: 56.0
-given x: 44.0, generated y: 0.8524273884752137, predicted y: 0.926610053861292, error: 0.07418266538607832
+given x: 54.0, generated y: 0.8831735033310352, predicted y: 0.926610053861292, error: 0.04343655053025686
 
 Input: [46.0, 48.0, 50.0, 52.0, 54.0, 56.0] with expected output: 58.0
-given x: 46.0, generated y: 0.530119372068204, predicted y: 0.5595900677244097, error: 0.029470695656205637
+given x: 56.0, generated y: 0.524499793429571, predicted y: 0.5595900677244097, error: 0.035090274294838686
 
 Input: [48.0, 50.0, 52.0, 54.0, 56.0, 58.0] with expected output: 60.0
-given x: 48.0, generated y: 0.04588467100669242, predicted y: 0.02379350979242184, error: 0.02209116121427058
+given x: 58.0, generated y: 0.04243338646585937, predicted y: 0.02379350979242184, error: 0.018639876673437528
 
 Input: [50.0, 52.0, 54.0, 56.0, 58.0, 60.0] with expected output: 62.0
-given x: 50.0, generated y: 0.8269020977771678, predicted y: 0.8367535811617932, error: 0.009851483384625381
+given x: 60.0, generated y: 0.8461254943263627, predicted y: 0.8367535811617932, error: 0.009371913164569534
 
 Input: [52.0, 54.0, 56.0, 58.0, 60.0, 62.0] with expected output: 64.0
-given x: 52.0, generated y: 0.7325688909781048, predicted y: 0.695928615214775, error: 0.036640275763329844
+given x: 62.0, generated y: 0.7211110236091997, predicted y: 0.695928615214775, error: 0.02518240839442465
 
 Input: [54.0, 56.0, 58.0, 60.0, 62.0, 64.0] with expected output: 66.0
-given x: 54.0, generated y: 0.043604634578112485, predicted y: 0.0001762720168250187, error: 0.043428362561287466
+given x: 64.0, generated y: 0.038549056723613515, predicted y: 0.0001762720168250187, error: 0.038372784706788496
 
 Input: [56.0, 58.0, 60.0, 62.0, 64.0, 66.0] with expected output: 68.0
-given x: 56.0, generated y: 0.7622961485498909, predicted y: 0.7200715112480204, error: 0.04222463730187054
+given x: 66.0, generated y: 0.7633153006719865, predicted y: 0.7200715112480204, error: 0.04324378942396612
 
 Input: [58.0, 60.0, 62.0, 64.0, 66.0, 68.0] with expected output: 70.0
-given x: 58.0, generated y: 0.8180070232016672, predicted y: 0.81665960154315, error: 0.0013474216585172005
+given x: 68.0, generated y: 0.8266480012931207, predicted y: 0.81665960154315, error: 0.009988399749970678
 
 Input: [60.0, 62.0, 64.0, 66.0, 68.0, 70.0] with expected output: 72.0
-given x: 60.0, generated y: 0.04521810878570789, predicted y: 0.01637470586305878, error: 0.028843402922649107
+given x: 70.0, generated y: 0.04053357396943437, predicted y: 0.01637470586305878, error: 0.02415886810637559
 
 Input: [62.0, 64.0, 66.0, 68.0, 70.0, 72.0] with expected output: 74.0
-given x: 62.0, generated y: 0.6011198454855518, predicted y: 0.5858586709153888, error: 0.01526117457016296
+given x: 72.0, generated y: 0.5961040140872215, predicted y: 0.5858586709153888, error: 0.010245343171832677
 
 Input: [64.0, 66.0, 68.0, 70.0, 72.0, 74.0] with expected output: 76.0
-given x: 64.0, generated y: 0.850235315577932, predicted y: 0.9121656655537789, error: 0.0619303499758469
+given x: 74.0, generated y: 0.8746381744286361, predicted y: 0.9121656655537789, error: 0.03752749112514275
 
 Input: [66.0, 68.0, 70.0, 72.0, 74.0, 76.0] with expected output: 78.0
-given x: 66.0, generated y: 0.051682644813141845, predicted y: 0.07109845337750609, error: 0.019415808564364243
+given x: 76.0, generated y: 0.049853182049469875, predicted y: 0.07109845337750609, error: 0.021245271328036212
 
 Input: [68.0, 70.0, 72.0, 74.0, 76.0, 78.0] with expected output: 80.0
-given x: 68.0, generated y: 0.3342353978433212, predicted y: 0.44480637808047624, error: 0.11057098023715506
+given x: 78.0, generated y: 0.3602837863495363, predicted y: 0.44480637808047624, error: 0.08452259173093996
 
 Input: [70.0, 72.0, 74.0, 76.0, 78.0, 80.0] with expected output: 82.0
-given x: 70.0, generated y: 0.8624534213767784, predicted y: 0.9748388489412716, error: 0.11238542756449321
+given x: 80.0, generated y: 0.8953864009866864, predicted y: 0.9748388489412716, error: 0.07945244795458517
 
 Input: [72.0, 74.0, 76.0, 78.0, 80.0, 82.0] with expected output: 84.0
-given x: 72.0, generated y: 0.06841809233571901, predicted y: 0.15998825220633062, error: 0.09157015987061161
+given x: 82.0, generated y: 0.07418959771267572, predicted y: 0.15998825220633062, error: 0.0857986544936549
 
 Input: [74.0, 76.0, 78.0, 80.0, 82.0, 84.0] with expected output: 86.0
-given x: 74.0, generated y: 0.14712793727631496, predicted y: 0.3081507775251291, error: 0.16102284024881414
+given x: 84.0, generated y: 0.17748158553131738, predicted y: 0.3081507775251291, error: 0.13066919199381172
 
 Input: [76.0, 78.0, 80.0, 82.0, 84.0, 86.0] with expected output: 88.0
-given x: 76.0, generated y: 0.8657777438891848, predicted y: 0.9996866418475623, error: 0.13390889795837746
+given x: 86.0, generated y: 0.9022236705969326, predicted y: 0.9996866418475623, error: 0.09746297125062964
 
 Input: [78.0, 80.0, 82.0, 84.0, 86.0, 88.0] with expected output: 90.0
-given x: 78.0, generated y: 0.11513564957616423, predicted y: 0.2759631919354149, error: 0.16082754235925067
+given x: 88.0, generated y: 0.13591658655989164, predicted y: 0.2759631919354149, error: 0.14004660537552327
 
 Input: [80.0, 82.0, 84.0, 86.0, 88.0, 90.0] with expected output: 92.0
-given x: 80.0, generated y: 0.07809369894071307, predicted y: 0.18677777604483048, error: 0.10868407710411741
+given x: 90.0, generated y: 0.09084507361519606, predicted y: 0.18677777604483048, error: 0.09593270242963442
 
 Plot points:
-(14.0,0.5466669806036659)
-(16.0,0.04561007603912222)
-(18.0,0.8244064199801914)
-(20.0,0.7406575653830022)
-(22.0,0.04359468469285527)
-(24.0,0.7558289552609739)
-(26.0,0.8210554469192448)
-(28.0,0.045454660684476005)
-(30.0,0.5864546493077627)
-(32.0,0.8514026426926655)
-(34.0,0.052330270531806666)
-(36.0,0.3182499436123481)
-(38.0,0.8628650119826269)
-(40.0,0.07010988028131496)
-(42.0,0.14022033908855872)
-(44.0,0.8657823985509496)
-(46.0,0.12011645437097834)
-(48.0,0.07581841186441904)
-(50.0,0.8628144758641413)
-(52.0,0.26464182349533166)
-(54.0,0.053946646968665024)
-(56.0,0.8524273884752137)
-(58.0,0.530119372068204)
-(60.0,0.04588467100669242)
-(62.0,0.8269020977771678)
-(64.0,0.7325688909781048)
-(66.0,0.043604634578112485)
-(68.0,0.7622961485498909)
-(70.0,0.8180070232016672)
-(72.0,0.04521810878570789)
-(74.0,0.6011198454855518)
-(76.0,0.850235315577932)
-(78.0,0.051682644813141845)
-(80.0,0.3342353978433212)
-(82.0,0.8624534213767784)
-(84.0,0.06841809233571901)
-(86.0,0.14712793727631496)
-(88.0,0.8657777438891848)
-(90.0,0.11513564957616423)
-(92.0,0.07809369894071307)
-~/Desktop/Projects/Swift/GenerativeArtificialNeuralNetwork main ?1 ❯
+(14.0,0.5391670327232512)
+(16.0,0.041989332182714154)
+(18.0,0.8426499906031822)
+(20.0,0.7302045316401823)
+(22.0,0.03850670585555169)
+(24.0,0.7557131924749779)
+(26.0,0.8309157001404889)
+(28.0,0.04086215642423006)
+(30.0,0.5824699908630248)
+(32.0,0.8765272589055503)
+(34.0,0.05080268554316763)
+(36.0,0.34603558264215584)
+(38.0,0.896145457962882)
+(40.0,0.07659604019799846)
+(42.0,0.16958546095417798)
+(44.0,0.9023144833027651)
+(46.0,0.1419718468103835)
+(48.0,0.08762472691587188)
+(50.0,0.8986854932321513)
+(52.0,0.29208765196150127)
+(54.0,0.05513399904259729)
+(56.0,0.8831735033310352)
+(58.0,0.524499793429571)
+(60.0,0.04243338646585937)
+(62.0,0.8461254943263627)
+(64.0,0.7211110236091997)
+(66.0,0.038549056723613515)
+(68.0,0.7633153006719865)
+(70.0,0.8266480012931207)
+(72.0,0.04053357396943437)
+(74.0,0.5961040140872215)
+(76.0,0.8746381744286361)
+(78.0,0.049853182049469875)
+(80.0,0.3602837863495363)
+(82.0,0.8953864009866864)
+(84.0,0.07418959771267572)
+(86.0,0.17748158553131738)
+(88.0,0.9022236705969326)
+(90.0,0.13591658655989164)
+(92.0,0.09084507361519606)
