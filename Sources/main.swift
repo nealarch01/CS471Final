@@ -33,7 +33,7 @@ guard let data = readCSV(filepath: filepath) else {
 
 print("Opened file")
 
-let trainingInputs = data.map { Array($0[0..<data[0].count - 1]) }
+let trainingInputs = data.map { Array($0.dropLast()) }
 let expectedOutputs = data.map { [$0[data[0].count - 1]] }
 
 print("Initialized training inputs and expected outputs")
@@ -58,25 +58,40 @@ let generated = neuralNetwork.trainGeneratively(
     offsetBy: nextOffset // This changes the expected output once the network has learned inputs
 )
 
+
+print("Generated \(generated.count) new rows of data")
 print("\nGenerated: ")
 for row in generated {
     print(row)
 }
-print("")
+
+let generatedInputs = generated.map { Array($0.dropLast()) }
+let generatedOutputs = generated.map { [$0[generated[0].count - 1]] }
+
+
+
+neuralNetwork.train(
+    trainingInputs: generatedInputs,
+    expectedOutputs: generatedOutputs,
+    learningRate: 0.60,
+    epochs: 250,
+    targetError: 0.009
+)
 
 var predictInput: [Double] = trainingInputs[0]
 var expectedOutput = expectedOutputs[0][0]
 
 var plotOutput: String = ""
 
-for _ in 0..<6 {
+for _ in 0..<20 {
     print("Input: \(predictInput) with expected output: \(expectedOutput)")
     let output = neuralNetwork.predict(row: predictInput, expectedOutput: expectedOutput)
-    print("\n")
-    plotOutput += "(\(output.x),\(output.y))\n"
+    print("") // Print a newline, empty string but the terminator will print a newline
+    plotOutput += "(\(expectedOutput),\(output.y))\n"
     predictInput = predictInput.map { $0 + nextOffset } // Increments all elements by 1
     expectedOutput += nextOffset
 }
 
-print(plotOutput.dropLast())
 
+print("Plot points:")
+print(plotOutput.dropLast())
