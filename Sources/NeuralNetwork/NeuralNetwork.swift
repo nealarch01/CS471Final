@@ -222,19 +222,19 @@ struct NeuralNetwork: Codable {
         expectedOutput += offsetBy // Change the expected output
 
         for _ in 0..<newRows {
-            for epoch in 0..<epochs {
+            for _ in 0..<epochs {
                 // let givenX = layers[0][layers[0].count - 1].collector
                 propagateForward()
                 let expected = cosFn(expectedOutput)
                 let error = sqrt(pow(expected - outputsAverage(), 2))
                 if error <= targetError {
-                    print(">> Epoch: \(epoch), Learning Rate: \(learningRate), Error: \(error)")
+                    // print(">> Epoch: \(epoch), Learning Rate: \(learningRate), Error: \(error)")
                     break
                 }
                 var newExpectedOutputs = [expected]
                 propagateBackward(expectedOutputs: &newExpectedOutputs)
                 updateWeights(learningRate: learningRate)
-                print(">> Epoch: \(epoch), Learning Rate: \(learningRate), Error: \(error)")
+                // print(">> Epoch: \(epoch), Learning Rate: \(learningRate), Error: \(error)")
             }
             generatedInputs.append(layers[0].map { $0.collector } + [cosFn(expectedOutput)])
             shiftInputs(newInput: outputsAverage())
