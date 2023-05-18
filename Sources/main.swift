@@ -83,7 +83,7 @@ var expectedOutput = expectedOutputs[0][0]
 
 var plotOutput: String = ""
 
-for _ in 0..<20 {
+for _ in 0..<40 {
     print("Input: \(predictInput) with expected output: \(expectedOutput)")
     let output = neuralNetwork.predict(row: predictInput, expectedOutput: expectedOutput)
     print("") // Print a newline, empty string but the terminator will print a newline
